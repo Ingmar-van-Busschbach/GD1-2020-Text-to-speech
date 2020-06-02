@@ -25,10 +25,11 @@ resume.addEventListener('click', () => {synth.resume();});
 
 play2.addEventListener('click', () => {
     let toSay = "";
-    for (let i = 0; i < ToSayText.length; i++) toSay += ToSayText[i];
+    for (let i = 0; i < textArray.length; i++) toSay += textArray[i];
     sayTheWord(toSay);
 });
 
+const textArray = ['Array element 1.', 'Array element 2.', 'Array element 3.'];
 
 function populateVoiceList() {
     voices = synth.getVoices();
