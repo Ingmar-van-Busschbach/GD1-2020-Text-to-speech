@@ -23,6 +23,12 @@ play.addEventListener('click', () => {sayTheWord(inputTxt.value);});
 pause.addEventListener('click', () => {synth.pause();});
 resume.addEventListener('click', () => {synth.resume();});
 
+play2.addEventListener('click', () => {
+    let toSay = "";
+    for (let i = 0; i < ToSayText.length; i++) toSay += ToSayText[i];
+    sayTheWord(toSay);
+});
+
 
 function populateVoiceList() {
     voices = synth.getVoices();
